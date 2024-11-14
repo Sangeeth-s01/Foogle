@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+</head>
+<style>
+*{
+
+}
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(bg3.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat 2;
+            
+            
+        }
+        label{
+            display: block;
+            margin-bottom: 1px;
+        }
+        div{
+            background-color: #761010;
+            border-radius: 10px;
+            padding: 50px;
+            width: 400px;
+            color: white;
+        }
+    input[type="text"],input[type="email"],input[type ="file"],select,textarea{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        }
+    input[type="submit"],input[type="reset"]{
+        background-color: rgba(30, 134, 29, 0.746);
+        color: beige;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        transition: 0.5s;
+        }
+    input:focus,textarea:focus,select:focus{
+        background-color: beige;
+        }
+    input[type="submit"]:hover,
+    input[type="reset"]:hover{
+        background-color: #ff9305;
+        transform: scale(1.05);
+        cursor: pointer;
+        }
+     h2{
+        text-align: center;
+        font-family:cursive ;
+        }   
+     p{
+        text-align: center;
+        font-family:cursive ;
+     }
+</style>
+
+<body>
+    <div>
+        <form action="abc.php" method="POST">
+            <h2>Contribute Recipies</h2>
+            <p>Contribute your valuable recipies to our collection</p>
+            <label for="name">Name :</label>
+            <input type="text" placeholder="First name Last name" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <h3>About Your Recipe</h3>
+            <label for="catagory" >Select Catagory</label>
+             <select name="Catagory" id="catagory" required>
+            <option value="select">select</option>
+            <option value="Breakfast & Brunch">Breakfast & Brunch</option>
+            <option value="Lunch & Dinner">Lunch & Dinner</option>
+            <option value="Snacks & Appentizers">Snacks & Appentizers</option>
+            <option value="Desserts & Sweet Treats">Desserts & Sweet Treats</option>
+            <option value="Healthy & Special Diets">Healthy & Special Diets</option>
+            <option value="Drinks & Smoothies">Drinks & Smoothies</option>
+        </select><br><br>
+        <label for="name of item">Name of Item :</label>
+        <input type="name" id="name" name="name" required><br><br>
+        <label for="Ingredients">Ingredients</label>
+        <textarea name="" id=" ingredients" cols="30" rows="5" name="address" required></textarea><br><br>
+        
+         
+        <label for="Instructions">Instructions</label>
+        <textarea name="" id=" Instructions" cols="30" rows="5" name="address" required></textarea><br><br>
+        <label for="upload">Upload Photo of Food Item</label>
+        <input type="file" name="file" required><br><br>
+        <input type="submit" value="SUBMIT FORM">
+        <input type="reset">
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+        const email = document.getElementById("email").value;
+        
+        if (!email.includes("@")) {
+        alert("Please enter a valid email address.");
+        return false;
+        }
+        
+        </script>
+</body>
+</html>
